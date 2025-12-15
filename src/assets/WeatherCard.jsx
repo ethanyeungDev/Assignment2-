@@ -86,7 +86,7 @@ export default function WeatherCard({ cityName, title }) {
         <span>°C</span>
       </p>
 
-      <p>{WeatherDescription}</p>
+      <p className="weatherDescription">{WeatherDescription}</p>
       <div className="weather-details"> 
           <div className="detail-item">
             <span className="label">Humidity</span>

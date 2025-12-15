@@ -118,6 +118,10 @@ body {
   color: #777;
 }
 
+.weatherDescription::first-letter {
+  text-transform: uppercase;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
