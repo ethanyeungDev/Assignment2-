@@ -1,36 +1,48 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./assets/Navbar";
-import CityInputs from "./assets/CityInputs";
+import CityInput from "./assets/CityInput";
 import WeatherCard from "./assets/WeatherCard";
 import { useContext } from "react";
 import WeatherContext from "./assets/WeatherContext";
 
 export default function App() {
-  const { originCity, currentCity } = useContext(WeatherContext);
+  const { originCity, setOriginCity, currentCity, setCurrentCity } = useContext(WeatherContext);
 
   return (
-    <Navbar />
     <div className="app-container">
-      
+      <Navbar />
 
       <Routes>
         <Route
           path="/"
           element={
                   <div className="page-content">
-                  <CityInputs />
-
-                  <WeatherCard
-                    title="Origin City Weather"
-                    cityName={originCity}
-                  />
-
-                  <WeatherCard
-                    title="Current City Weather"
-                    cityName={currentCity}
-                  />
-                </div>
+                    <div className="city-column">
+                      <CityInput
+                        label="Origin City"
+                        value={originCity}
+                        onChange={setOriginCity}
+                        placeholder="Enter origin city"
+                      />
+                      <WeatherCard
+                        title="Origin City Weather"
+                        cityName={originCity}
+                      />
+                    </div>
+                    <div className="city-column">
+                      <CityInput
+                        label="Current City"
+                        value={currentCity}
+                        onChange={setCurrentCity}
+                        placeholder="Enter current city"
+                      />
+                      <WeatherCard
+                        title="Current City Weather"
+                        cityName={currentCity}
+                      />
+                    </div>
+                  </div>
           }
         />
 

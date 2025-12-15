@@ -22,8 +22,15 @@ body {
   flex-wrap: wrap;
 }
 
+.city-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
 .input-group {
-  flex: 1;
+  flex: 0 0 auto;
   background: white;
   padding: 16px;
   border-radius: 10px;
@@ -52,9 +59,9 @@ body {
 
 .weather-details{
   display: flex;
+  margin-top: 1rem;
   gap: 30px;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .weather-card {
@@ -62,19 +69,19 @@ body {
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   text-align: center;
 }
 
 .weather-card h2 {
   font-size: 20px;
-  margin-bottom: 6px;
+  /* margin-bottom: 6px; */
 }
 
 .weather-card h3 {
   font-size: 16px;
   color: #666;
-  margin-bottom: 14px;
+  /* margin-bottom: 14px; */
 }
 
 .temp-value {
@@ -83,7 +90,7 @@ body {
 }
 
 .weather-card p {
-  margin: 10px 0;
+  /* margin: 10px 0; */
   font-size: 16px;
 }
 
@@ -94,7 +101,7 @@ body {
   margin-top: 8px;
   font-size: 15px;
   padding: 2rem 4rem 2rem 4rem;
-  background: rgb(221, 216, 216);
+  background: rgb(192 229 241);
   border-color: blue;
   border: 2px solid;
   border-radius: 5px;
@@ -163,5 +170,9 @@ body {
   max-width: 900px;
   margin-top: 40px;  
   padding: 0 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3rem;
+  row-gap: 5rem;
 }
 
