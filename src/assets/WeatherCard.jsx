@@ -86,17 +86,17 @@ export default function WeatherCard({ cityName, title }) {
         <span>°C</span>
       </p>
 
-      <p>{WeatherDescription}</p>
-
-      <div className="detail-item">
-        <span className="label">Humidity</span>
-        <span className="value">{Humidity}%</span>
-      </div>
-
-      <div className="detail-item">
-        <span className="label">Wind</span>
-        <span className="value">{WindSpeed} m/s</span>
-      </div>
+      <p className="weatherDescription">{WeatherDescription}</p>
+      <div className="weather-details"> 
+          <div className="detail-item">
+            <span className="label">Humidity</span>
+            <span className="value">{Humidity}%</span>
+          </div>
+          <div className="detail-item">
+            <span className="label">Wind</span>
+            <span className="value">{WindSpeed} m/s</span>
+          </div>
+        </div>
     </div>
   );
 }
