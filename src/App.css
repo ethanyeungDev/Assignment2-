@@ -11,9 +11,8 @@ body {
 }
 
 .app-container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
+  /* margin: 40px auto; */
+  /* padding: 20px; */
 }
 
 .city-inputs {
@@ -51,6 +50,13 @@ body {
   color: #555;
 }
 
+.weather-details{
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .weather-card {
   background: white;
   padding: 20px;
@@ -83,9 +89,18 @@ body {
 
 .detail-item {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   margin-top: 8px;
   font-size: 15px;
+  padding: 2rem 4rem 2rem 4rem;
+  background: rgb(221, 216, 216);
+  border-color: blue;
+  border: 2px solid;
+  border-radius: 5px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .weather-card.loading {
@@ -109,9 +124,9 @@ body {
   align-items: center;
   padding: 20px 40px;
   background: #1e1e1e;
-  position: sticky;
+  /* position: sticky; */
   top: 0;
-  z-index: 100;
+ 
 }
 
 
@@ -138,7 +153,10 @@ body {
   padding: 30px;
   border-radius: 12px;
 }
+
 .page-content {
+  justify-self: center;
+  max-width: 900px;
   margin-top: 40px;  
   padding: 0 40px;
 }

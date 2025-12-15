@@ -10,8 +10,9 @@ export default function App() {
   const { originCity, currentCity } = useContext(WeatherContext);
 
   return (
+    <Navbar />
     <div className="app-container">
-      <Navbar />
+      
 
       <Routes>
         <Route
