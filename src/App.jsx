@@ -1,21 +1,59 @@
-import { useState } from "react";
 import "./App.css";
-import CityInputs from "./components/CityInputs";
-import WeatherCard from "./components/WeatherCard";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./assets/Navbar";
+import CityInputs from "./assets/CityInputs";
+import WeatherCard from "./assets/WeatherCard";
+import { useContext } from "react";
+import WeatherContext from "./assets/WeatherContext";
 
-
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const { originCity, currentCity } = useContext(WeatherContext);
 
   return (
-    <>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-    </>
-  )
-}
+    <div className="app-container">
+      <Navbar />
 
-export default App
+      <Routes>
+        <Route
+          path="/"
+          element={
+                  <div className="page-content">
+                  <CityInputs />
+
+                  <WeatherCard
+                    title="Origin City Weather"
+                    cityName={originCity}
+                  />
+
+                  <WeatherCard
+                    title="Current City Weather"
+                    cityName={currentCity}
+                  />
+                </div>
+          }
+        />
+
+        <Route
+          path="/about"
+          element={
+               <div className="about-page">
+                  <h2>About This Project</h2>
+                <p>
+                  This weather application shows realtime weather information
+                  using the OpenWeather API.
+                </p>
+            <br></br>
+
+                <h3>Group Members</h3>
+                <ul>
+                  <li>Lovedeep</li>
+                  <li>Clay</li>
+                  <li>Ethan</li>
+                </ul>
+              </div>
+          }
+        />
+      </Routes>
+    </div>
+  );
+}
