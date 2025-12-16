@@ -10,11 +10,6 @@ body {
   min-height: 100vh;
 }
 
-.app-container {
-  /* margin: 40px auto; */
-  /* padding: 20px; */
-}
-
 .city-inputs {
   display: flex;
   gap: 20px;
@@ -25,7 +20,7 @@ body {
 .city-column {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 3rem;
   align-items: stretch;
 }
 
@@ -50,13 +45,6 @@ body {
   border: 1px solid #ccc;
   font-size: 16px;
 }
-
-.current-value {
-  margin-top: 8px;
-  font-size: 14px;
-  color: #555;
-}
-
 .weather-details{
   display: flex;
   margin-top: 1rem;
@@ -66,16 +54,15 @@ body {
 
 .weather-card {
   background: white;
-  padding: 20px;
+  padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-  /* margin-bottom: 20px; */
+  box-shadow: 0 8px 20px rgb(51 57 189 / 44%);
   text-align: center;
 }
 
 .weather-card h2 {
   font-size: 20px;
-  /* margin-bottom: 6px; */
+  padding: 3%;
 }
 
 .weather-card h3 {
@@ -86,11 +73,11 @@ body {
 
 .temp-value {
   font-size: 48px;
+  color: #3fb3d0;
   font-weight: bold;
 }
 
 .weather-card p {
-  /* margin: 10px 0; */
   font-size: 16px;
 }
 
@@ -102,10 +89,8 @@ body {
   font-size: 15px;
   padding: 2rem 4rem 2rem 4rem;
   background: rgb(192 229 241);
-  border-color: blue;
-  border: 2px solid;
-  border-radius: 5px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgb(63 79 189 / 41%);
   margin-bottom: 10px;
   text-align: center;
 }
@@ -168,11 +153,11 @@ body {
 .page-content {
   justify-self: center;
   max-width: 900px;
-  margin-top: 40px;  
-  padding: 0 40px;
+  margin-top: 70px;  
+  padding: 0 10px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 3rem;
-  row-gap: 5rem;
+  column-gap: 4rem;
+  row-gap: 2rem;
 }
 

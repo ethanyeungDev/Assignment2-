@@ -12,7 +12,7 @@ export default function  CityInput({ label, value, onChange, placeholder }) {
         onChange={e => onChange(e.target.value)}
         placeholder={placeholder}
       />
-      <div className="current-value">Current: {value}</div>
+      {/* <div className="current-value">Current: {value}</div> */}
     </div>
   );
 }
